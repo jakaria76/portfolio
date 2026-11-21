@@ -6,9 +6,8 @@
 export const site = {
   name: "MD. Jakaria",
   title: "Full Stack & Mobile App Developer",
-  // TODO: after deploying on Vercel, replace this with your real URL
-  // (for example https://mdjakaria.vercel.app or your custom domain)
-  url: "https://mdjakaria.vercel.app",
+  // Your live site address. If you add a custom domain later, change it here.
+  url: "https://mdjakaria-lac.vercel.app",
   description:
     "MD. Jakaria is a full stack and Flutter developer from Dhaka with 3 apps on Google Play, building web and mobile apps with Flutter, ASP.NET Core, Laravel and React.",
   tagline:
