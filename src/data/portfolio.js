@@ -4,12 +4,17 @@
 // ============================================================
 
 export const site = {
-  name: "MD. Jakaria",
+  // Full name: used in the page title, main heading and for Google
+  name: "MD. Jakaria Mahmud",
+  // Short name: used in the navbar logo where space is tight
+  shortName: "MD. Jakaria",
+  // Other ways people may write your name (helps Google connect them to you)
+  alternateNames: ["MD. Jakaria", "Md Jakaria Mahmud", "Jakaria Mahmud", "jakaria76"],
   title: "Full Stack & Mobile App Developer",
   // Your live site address. If you add a custom domain later, change it here.
   url: "https://md-jakaria-mahmud.vercel.app",
   description:
-    "MD. Jakaria is a full stack and Flutter developer from Dhaka with 3 apps on Google Play, building web and mobile apps with Flutter, ASP.NET Core, Laravel and React.",
+    "MD. Jakaria Mahmud is a full stack and Flutter developer from Dhaka, Bangladesh with 3 apps on Google Play, building web and mobile apps with Flutter, ASP.NET Core, Laravel and React.",
   tagline:
     "I build web and mobile applications with Flutter, ASP.NET Core, Laravel and React, and I have three apps live on Google Play.",
   email: "jakariamahmud76@gmail.com",
@@ -20,13 +25,15 @@ export const site = {
   photo: "/jakaria.png",
   // your resume inside the /public folder
   resume: "/resume.pdf",
-  // TODO: paste the code Google Search Console gives you (HTML tag method)
+  // Search Console is verified with the file public/google6df2a6de2289172b.html
+  // (never delete it). This field is only for the alternative meta-tag method.
   googleVerification: "",
   keywords: [
+    "MD. Jakaria Mahmud",
+    "Md Jakaria Mahmud",
+    "Jakaria Mahmud",
     "MD. Jakaria",
     "Jakaria",
-    "Md. Jakaria Mahmud",
-    "Jakaria Mahmud",
     "Full Stack Developer",
     "Flutter Developer",
     "Flutter App Developer Bangladesh",
@@ -40,7 +47,7 @@ export const site = {
 };
 
 export const about = [
-  "I'm a Computer Science & Engineering student at Ahsanullah University of Science and Technology (AUST) who enjoys turning ideas into working products. I build cross-platform mobile apps with Flutter, and web apps with ASP.NET Core, Laravel and React.",
+  "I'm MD. Jakaria Mahmud, a Computer Science & Engineering student at Ahsanullah University of Science and Technology (AUST) who enjoys turning ideas into working products. I build cross-platform mobile apps with Flutter, and web apps with ASP.NET Core, Laravel and React.",
   "Three of my Flutter apps are published on Google Play: a FinTech investment app, a community and blood donor app, and an Islamic lifestyle companion. Most of my projects are complete systems, with authentication and security, admin dashboards, databases, cloud services and a clean interface on top.",
   "Beyond app development, I'm a co-author of a peer-reviewed research paper on AI-based fruit quality assessment, published in Applied AI Letters (Wiley).",
   "I'm open to software engineering roles and freelance projects where I can build reliable products that make a real difference for the people who use them.",

@@ -57,7 +57,7 @@ export default function Navbar({ hasResume }) {
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <a href="#" className="text-lg font-bold tracking-tight text-heading">
-          {site.name}
+          {site.shortName}
           <span className="text-accent">.</span>
         </a>
 

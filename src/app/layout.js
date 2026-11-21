@@ -14,8 +14,12 @@ export const metadata = {
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
   alternates: { canonical: "/" },
+  applicationName: site.name,
   openGraph: {
-    type: "website",
+    type: "profile",
+    firstName: "Jakaria",
+    lastName: "Mahmud",
+    username: "jakaria76",
     url: site.url,
     siteName: site.name,
     title: fullTitle,
