@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* dark: classes apply when <html> has the "dark" class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============================================================
+   Theme colors. Light is the default; .dark overrides them.
+   Use them in classes like bg-page, text-heading, border-line.
+   ============================================================ */
+:root {
+  --page: #f8fafc;
+  --card: #ffffff;
+  --line: rgb(15 23 42 / 0.1);
+  --heading: #0f172a;
+  --body: #334155;
+  --muted: #475569;
+  --faint: #64748b;
+  --chip: #f1f5f9;
+  --accent: #047857;
+  --accent-solid: #047857;
+  --accent-hover: #065f46;
+  --on-accent: #ffffff;
+  --nav: rgb(248 250 252 / 0.85);
+  color-scheme: light;
+}
+
+.dark {
+  --page: #0b0f19;
+  --card: rgb(255 255 255 / 0.03);
+  --line: rgb(255 255 255 / 0.1);
+  --heading: #ffffff;
+  --body: #cbd5e1;
+  --muted: #94a3b8;
+  --faint: #64748b;
+  --chip: rgb(255 255 255 / 0.05);
+  --accent: #34d399;
+  --accent-solid: #10b981;
+  --accent-hover: #34d399;
+  --on-accent: #020617;
+  --nav: rgb(11 15 25 / 0.85);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-heading: var(--heading);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-chip: var(--chip);
+  --color-accent: var(--accent);
+  --color-accent-solid: var(--accent-solid);
+  --color-accent-hover: var(--accent-hover);
+  --color-on-accent: var(--on-accent);
+  --color-nav: var(--nav);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: rgb(16 185 129 / 0.3);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    transition: none;
+  }
+  .animate-fade-up {
+    animation: none;
+  }
+}
