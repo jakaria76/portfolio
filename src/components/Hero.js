@@ -46,6 +46,11 @@ export default function Hero({ hasPhoto, hasResume }) {
           <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-heading sm:text-6xl lg:text-7xl">
             {site.name}
           </h1>
+          {site.banglaName && (
+            <p lang="bn" className="font-bangla mt-2 text-lg font-medium text-faint sm:text-xl">
+              {site.banglaName}
+            </p>
+          )}
           <p className="mt-3 text-xl font-semibold sm:mt-4 sm:text-3xl">
             <span className="bg-gradient-to-r from-emerald-500 to-cyan-500 bg-clip-text text-transparent">
               {site.title}

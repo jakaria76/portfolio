@@ -1,8 +1,15 @@
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans_Bengali } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/portfolio";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
+// Bangla font, used only where Bangla text appears (via the font-bangla class)
+const bangla = Noto_Sans_Bengali({
+  subsets: ["bengali"],
+  weight: ["500", "600"],
+  display: "swap",
+  variable: "--font-bangla",
+});
 
 const fullTitle = `${site.name} | ${site.title}`;
 
@@ -48,7 +55,7 @@ const themeScript = `try{if(localStorage.getItem("theme")==="dark")document.docu
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.className} suppressHydrationWarning>
+    <html lang="en" className={`${inter.className} ${bangla.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

@@ -8,8 +8,22 @@ export const site = {
   name: "MD. Jakaria Mahmud",
   // Short name: used in the navbar logo where space is tight
   shortName: "MD. Jakaria",
+  // Your name in Bangla, shown under your English name so Bangla searches find you
+  banglaName: "মোঃ জাকারিয়া মাহমুদ",
   // Other ways people may write your name (helps Google connect them to you)
-  alternateNames: ["MD. Jakaria", "Md Jakaria Mahmud", "Jakaria Mahmud", "jakaria76"],
+  alternateNames: [
+    "MD. Jakaria",
+    "Md Jakaria Mahmud",
+    "Md. Jakaria Mahmud",
+    "Jakaria Mahmud",
+    "Jakaria",
+    "jakaria76",
+    "মোঃ জাকারিয়া মাহমুদ",
+    "মো. জাকারিয়া মাহমুদ",
+    "মোঃ জাকারিয়া",
+    "জাকারিয়া মাহমুদ",
+    "জাকারিয়া",
+  ],
   title: "Full Stack & Mobile App Developer",
   // Your live site address. If you add a custom domain later, change it here.
   url: "https://md-jakaria-mahmud.vercel.app",
@@ -34,6 +48,8 @@ export const site = {
     "Jakaria Mahmud",
     "MD. Jakaria",
     "Jakaria",
+    "মোঃ জাকারিয়া মাহমুদ",
+    "জাকারিয়া মাহমুদ",
     "Full Stack Developer",
     "Flutter Developer",
     "Flutter App Developer Bangladesh",
