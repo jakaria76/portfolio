@@ -1,16 +1,14 @@
 // Shared section wrapper.
 // number: "01", "02"... shown small next to the section label
-// tone:   "alt" gives the section a tinted band so neighbouring sections look different
+
 // align:  "center" centers the header
-export default function Section({ id, number, eyebrow, title, description, tone, align, children }) {
+export default function Section({ id, number, eyebrow, title, description, align, children }) {
   const centered = align === "center";
 
   return (
     <section
       id={id}
-      className={`relative scroll-mt-16 overflow-hidden py-14 sm:py-20 lg:py-24 ${
-        tone === "alt" ? "border-y border-line bg-chip/60 dark:bg-white/[0.02]" : ""
-      }`}
+      className="relative scroll-mt-16 overflow-hidden py-10 sm:py-12 lg:py-14"
     >
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <div className={`max-w-2xl ${centered ? "mx-auto text-center" : ""}`}>
@@ -36,7 +34,7 @@ export default function Section({ id, number, eyebrow, title, description, tone,
             </p>
           )}
         </div>
-        <div className="mt-10 sm:mt-12">{children}</div>
+        <div className="mt-8 sm:mt-10">{children}</div>
       </div>
     </section>
   );

@@ -20,11 +20,11 @@ function AuthorList({ authors, highlight }) {
   );
 }
 
-// Design: tinted band; the paper card comes into focus from a blur, wrapped in a
+// Design: the paper card comes into focus from a blur, wrapped in a
 // gradient border with a large book mark in the corner. Tags pop in.
 export default function Publications() {
   return (
-    <Section id="research" number="05" eyebrow="Research" title="Publications" tone="alt">
+    <Section id="research" number="05" eyebrow="Research" title="Publications">
       <div className="space-y-6">
         {publications.map((paper) => (
           <div

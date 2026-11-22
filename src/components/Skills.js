@@ -11,11 +11,11 @@ const icons = {
   "DevOps & Tools": TerminalIcon,
 };
 
-// Design: tinted band; cards zoom in one after another and every skill tag
+// Design: cards zoom in one after another and every skill tag
 // pops in. On hover a card lifts and its icon fills with the accent colour.
 export default function Skills() {
   return (
-    <Section id="skills" number="03" eyebrow="Skills" title="Technologies I work with" tone="alt">
+    <Section id="skills" number="03" eyebrow="Skills" title="Technologies I work with">
       <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
         {skills.map((group, g) => {
           const Icon = icons[group.category] ?? CodeIcon;
