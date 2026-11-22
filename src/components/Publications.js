@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { publications } from "@/data/portfolio";
+import { publications, site } from "@/data/portfolio";
 import Section from "./Section";
 import { ExternalIcon } from "./Icons";
 
@@ -68,6 +68,22 @@ export default function Publications() {
                 <ExternalIcon className="h-4 w-4" />
                 Read paper
               </a>
+              {site.orcid && (
+                <a
+                  href={site.orcid}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-line px-3.5 py-2 text-body transition-colors hover:border-accent/40 hover:text-heading"
+                >
+                  <span
+                    className="flex h-4 w-4 items-center justify-center rounded-full bg-[#A6CE39] text-[9px] font-bold text-white"
+                    aria-hidden="true"
+                  >
+                    iD
+                  </span>
+                  ORCID
+                </a>
+              )}
               <span className="break-all text-faint">DOI: {paper.doi}</span>
             </div>
           </article>

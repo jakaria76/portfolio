@@ -35,6 +35,7 @@ export const site = {
   location: "Dhaka, Bangladesh",
   github: "https://github.com/jakaria76",
   linkedin: "https://www.linkedin.com/in/md-jakaria76/",
+  orcid: "https://orcid.org/0009-0009-3280-3012",
   // your photo inside the /public folder
   photo: "/jakaria.png",
   // your resume inside the /public folder

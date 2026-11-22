@@ -70,7 +70,14 @@ function buildJsonLd() {
           name: item.school,
         })),
         knowsAbout: skills.flatMap((group) => group.items),
-        sameAs: [site.github, site.linkedin],
+        sameAs: [site.github, site.linkedin, site.orcid].filter(Boolean),
+        ...(site.orcid && {
+          identifier: {
+            "@type": "PropertyValue",
+            propertyID: "ORCID",
+            value: site.orcid.replace("https://orcid.org/", ""),
+          },
+        }),
       },
       ...playStoreApps.map(({ project, url }) => ({
         "@type": "MobileApplication",
