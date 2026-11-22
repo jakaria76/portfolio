@@ -7,6 +7,7 @@ import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#research", label: "Research" },
@@ -39,7 +40,7 @@ export default function Navbar({ hasResume }) {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     // close the mobile menu if the screen becomes desktop-sized
-    const onResize = () => window.innerWidth >= 1024 && setOpen(false);
+    const onResize = () => window.innerWidth >= 1280 && setOpen(false);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onResize);
@@ -61,7 +62,7 @@ export default function Navbar({ hasResume }) {
           <span className="text-accent">.</span>
         </a>
 
-        <div className="hidden items-center gap-8 lg:flex">
+        <div className="hidden items-center gap-8 xl:flex">
           <ul className="flex items-center gap-7">
             {links.map((link) => (
               <li key={link.href}>
@@ -99,7 +100,7 @@ export default function Navbar({ hasResume }) {
         </div>
 
         {/* mobile: theme toggle stays visible next to the menu button */}
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2 xl:hidden">
           <ThemeToggle />
           <button
             type="button"
@@ -114,7 +115,7 @@ export default function Navbar({ hasResume }) {
       </nav>
 
       {open && (
-        <ul className="space-y-1 border-t border-line px-4 pb-4 pt-2 lg:hidden">
+        <ul className="space-y-1 border-t border-line px-4 pb-4 pt-2 xl:hidden">
           {links.map((link) => (
             <li key={link.href}>
               <a

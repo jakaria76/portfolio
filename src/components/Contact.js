@@ -7,8 +7,8 @@ export default function Contact() {
     <Section id="contact" eyebrow="Contact" title="Let's work together">
       <div className="rounded-3xl border border-line bg-gradient-to-br from-emerald-500/10 via-transparent to-cyan-500/5 p-6 sm:p-12">
         <p className="max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-          I&apos;m open to software engineering roles, freelance projects and collaborations. If you
-          have an idea, an opportunity or just want to say hi, my inbox is open.
+          Have a project idea, a collaboration in mind or just want to say hi? I&apos;m always happy
+          to connect, and my inbox is open.
         </p>
 
         <a

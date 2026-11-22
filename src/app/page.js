@@ -1,9 +1,10 @@
 import fs from "fs";
 import path from "path";
-import { site, skills, education, projects, publications } from "@/data/portfolio";
+import { site, skills, education, experience, projects, publications } from "@/data/portfolio";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Publications from "@/components/Publications";
@@ -70,6 +71,9 @@ function buildJsonLd() {
           name: item.school,
         })),
         knowsAbout: skills.flatMap((group) => group.items),
+        worksFor: experience
+          .filter((job) => job.current)
+          .map((job) => ({ "@type": "Organization", name: job.company })),
         sameAs: [site.github, site.linkedin, site.orcid].filter(Boolean),
         ...(site.orcid && {
           identifier: {
@@ -121,6 +125,7 @@ export default function Home() {
       <main>
         <Hero hasPhoto={hasPhoto} hasResume={hasResume} />
         <About />
+        <Experience />
         <Skills />
         <Projects />
         <Publications />

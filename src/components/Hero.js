@@ -40,7 +40,7 @@ export default function Hero({ hasPhoto, hasResume }) {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60 motion-reduce:hidden" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
             </span>
-            Open to new opportunities
+            Currently at Mariners Group
           </p>
 
           <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-heading sm:text-6xl lg:text-7xl">

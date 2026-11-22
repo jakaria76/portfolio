@@ -74,17 +74,35 @@ export const site = {
 };
 
 export const about = [
-  "I'm MD. Jakaria Mahmud, a Computer Science & Engineering student at Ahsanullah University of Science and Technology (AUST) who enjoys turning ideas into working products. I build cross-platform mobile apps with Flutter, and web apps with ASP.NET Core, Laravel and React.",
+  "I'm MD. Jakaria Mahmud, a Junior Software and Web Developer at Mariners Group in Dhaka, with a B.Sc. in Computer Science & Engineering from Ahsanullah University of Science and Technology (AUST). I enjoy turning ideas into working products: cross-platform mobile apps with Flutter, and web apps with ASP.NET Core, Laravel and React.",
   "Three of my Flutter apps are published on Google Play: a FinTech investment app, a community and blood donor app, and an Islamic lifestyle companion. Most of my projects are complete systems, with authentication and security, admin dashboards, databases, cloud services and a clean interface on top.",
   "Beyond app development, I'm a co-author of a peer-reviewed research paper on AI-based fruit quality assessment, published in Applied AI Letters (Wiley).",
-  "I'm open to software engineering roles and freelance projects where I can build reliable products that make a real difference for the people who use them.",
+  "I care about clean, maintainable code and about building reliable products that make a real difference for the people who use them.",
 ];
 
 export const quickFacts = [
-  { label: "Studying", value: "B.Sc. in CSE, AUST" },
+  { label: "Working at", value: "Mariners Group" },
+  { label: "Education", value: "B.Sc. in CSE, AUST" },
   { label: "Published", value: "3 apps on Google Play" },
-  { label: "Research", value: "Published in Applied AI Letters (Wiley)" },
-  { label: "Main stack", value: "Flutter, C#, PHP, JavaScript" },
+  { label: "Research", value: "Applied AI Letters (Wiley)" },
+];
+
+// Jobs, newest first. current: true shows "Present" and a "Current" badge.
+// highlights / stack: add what you do and the tools you use; empty lists are hidden.
+export const experience = [
+  {
+    role: "Junior Software and Web Developer",
+    company: "Mariners Group",
+    department: "IT Department",
+    location: "Dhaka, Bangladesh",
+    period: "Oct 2026 – Present",
+    startDate: "2026-10-04",
+    current: true,
+    summary:
+      "Building and maintaining software and web applications as part of the company's IT team.",
+    highlights: [],
+    stack: [],
+  },
 ];
 
 export const skills = [
