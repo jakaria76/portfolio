@@ -1,6 +1,5 @@
 // Shared section wrapper.
 // number: "01", "02"... shown small next to the section label
-
 // align:  "center" centers the header
 export default function Section({ id, number, eyebrow, title, description, align, children }) {
   const centered = align === "center";
