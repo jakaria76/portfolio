@@ -46,11 +46,22 @@ export const viewport = {
 // never sees a flash of the light theme. Light is the default.
 const themeScript = `try{if(localStorage.getItem("theme")==="dark")document.documentElement.classList.add("dark")}catch(e){}`;
 
+// Decides before the page paints whether to show the loading screen:
+// skipped for search-engine bots (good for SEO) and for repeat visits in the same session.
+const preloaderScript = `(function(){var d=document.documentElement;try{var bot=/bot|crawl|spider|slurp|lighthouse|pagespeed|preview|facebookexternalhit|linkedin|whatsapp/i.test(navigator.userAgent);if(bot||sessionStorage.getItem("preloaded")){d.classList.add("preloader-skip");return}}catch(e){}d.classList.add("preloading")})();`;
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        {site.preloaderSeconds > 0 && (
+          <script dangerouslySetInnerHTML={{ __html: preloaderScript }} />
+        )}
+        {/* without JavaScript the loading screen could never finish, so hide it */}
+        <noscript>
+          <style>{`#preloader{display:none!important}`}</style>
+        </noscript>
       </head>
       {/* suppressHydrationWarning: browser extensions (e.g. dark-mode or screen
           filter extensions) add attributes like style="filter:none" to <body>

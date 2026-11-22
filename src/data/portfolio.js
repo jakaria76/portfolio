@@ -38,6 +38,9 @@ export const site = {
   orcid: "https://orcid.org/0009-0009-3280-3012",
   // your photo inside the /public folder
   photo: "/jakaria.png",
+  // Loading screen shown when someone opens the site (once per visit).
+  // Number of seconds; set to 0 to turn the loading screen off.
+  preloaderSeconds: 3,
   // your resume inside the /public folder
   resume: "/resume.pdf",
   // Search Console is verified with the file public/google6df2a6de2289172b.html

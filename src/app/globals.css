@@ -65,6 +65,15 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Loading screen: no scrolling while it shows; hidden instantly when skipped */
+.preloading body {
+  overflow: hidden;
+}
+
+.preloader-skip #preloader {
+  display: none;
+}
+
 ::selection {
   background: rgb(16 185 129 / 0.3);
 }
