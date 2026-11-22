@@ -1,5 +1,5 @@
 // Shared section wrapper.
-// number: "01", "02"... shown in the header and as a large faint background number
+// number: "01", "02"... shown small next to the section label
 // tone:   "alt" gives the section a tinted band so neighbouring sections look different
 // align:  "center" centers the header
 export default function Section({ id, number, eyebrow, title, description, tone, align, children }) {
@@ -12,17 +12,6 @@ export default function Section({ id, number, eyebrow, title, description, tone,
         tone === "alt" ? "border-y border-line bg-chip/60 dark:bg-white/[0.02]" : ""
       }`}
     >
-      {number && (
-        <span
-          className={`pointer-events-none absolute top-6 select-none text-[7rem] font-black leading-none tracking-tighter text-heading/[0.04] sm:top-8 sm:text-[11rem] dark:text-white/[0.03] ${
-            centered ? "left-1/2 -translate-x-1/2" : "right-4 sm:right-10"
-          }`}
-          aria-hidden="true"
-        >
-          {number}
-        </span>
-      )}
-
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <div className={`max-w-2xl ${centered ? "mx-auto text-center" : ""}`}>
           <p
