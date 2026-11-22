@@ -1,5 +1,7 @@
+import Image from "next/image";
 import { experience } from "@/data/portfolio";
 import Section from "./Section";
+import { ExternalIcon } from "./Icons";
 
 export default function Experience() {
   if (experience.length === 0) return null;
@@ -14,20 +16,44 @@ export default function Experience() {
           >
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
               <div className="flex gap-4">
-                {/* company initial as a simple logo */}
-                <div
-                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-600 text-lg font-bold text-white"
-                  aria-hidden="true"
-                >
-                  {job.company.charAt(0)}
-                </div>
+                {job.logo ? (
+                  <Image
+                    src={job.logo}
+                    alt={`${job.company} logo`}
+                    width={56}
+                    height={56}
+                    className="h-12 w-12 shrink-0 rounded-full bg-white object-contain ring-1 ring-line sm:h-14 sm:w-14"
+                  />
+                ) : (
+                  // company initial when there is no logo
+                  <div
+                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-600 text-lg font-bold text-white"
+                    aria-hidden="true"
+                  >
+                    {job.company.charAt(0)}
+                  </div>
+                )}
                 <div>
                   <h3 className="text-lg font-bold text-heading sm:text-xl">{job.role}</h3>
                   <p className="mt-1 font-medium text-body">
-                    {job.company}
+                    {job.companyUrl ? (
+                      <a
+                        href={job.companyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 hover:text-accent"
+                      >
+                        {job.company}
+                        <ExternalIcon className="h-3.5 w-3.5" />
+                      </a>
+                    ) : (
+                      job.company
+                    )}
                     {job.department && <span className="text-muted"> · {job.department}</span>}
                   </p>
-                  <p className="mt-1 text-sm text-faint">{job.location}</p>
+                  <p className="mt-1 text-sm text-faint">
+                    {[job.employmentType, job.location].filter(Boolean).join(" · ")}
+                  </p>
                 </div>
               </div>
 

@@ -94,6 +94,12 @@ function ProjectCard({ project }) {
         </span>
       </div>
 
+      {project.builtAt && (
+        <p className="mt-2 text-sm text-faint">
+          Built at <span className="font-medium text-body">{project.builtAt}</span>
+        </p>
+      )}
+
       {project.published && (
         <p className="mt-3 inline-flex w-fit items-center gap-1.5 text-xs font-semibold text-accent">
           <PlayIcon className="h-3.5 w-3.5" />

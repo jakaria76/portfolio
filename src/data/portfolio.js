@@ -28,9 +28,9 @@ export const site = {
   // Your live site address. If you add a custom domain later, change it here.
   url: "https://md-jakaria-mahmud.vercel.app",
   description:
-    "MD. Jakaria Mahmud is a full stack and Flutter developer from Dhaka, Bangladesh with 3 apps on Google Play, building web and mobile apps with Flutter, ASP.NET Core, Laravel and React.",
+    "MD. Jakaria Mahmud is a full stack and Flutter developer at Mariners Group, Dhaka, with 3 apps on Google Play, building web and mobile apps with Next.js, Flutter, ASP.NET Core and Laravel.",
   tagline:
-    "I build web and mobile applications with Flutter, ASP.NET Core, Laravel and React, and I have three apps live on Google Play.",
+    "I build web and mobile applications with Next.js, Flutter, ASP.NET Core and Laravel, and I have three apps live on Google Play.",
   email: "jakariamahmud76@gmail.com",
   location: "Dhaka, Bangladesh",
   github: "https://github.com/jakaria76",
@@ -62,6 +62,7 @@ export const site = {
     "ASP.NET Core Developer Bangladesh",
     "Laravel Developer Dhaka",
     "React Developer Bangladesh",
+    "Next.js Developer Bangladesh",
     "Software Engineer Bangladesh",
     // education, work, research
     "AUST CSE",
@@ -74,7 +75,7 @@ export const site = {
 };
 
 export const about = [
-  "I'm MD. Jakaria Mahmud, a Junior Software and Web Developer at Mariners Group in Dhaka, with a B.Sc. in Computer Science & Engineering from Ahsanullah University of Science and Technology (AUST). I enjoy turning ideas into working products: cross-platform mobile apps with Flutter, and web apps with ASP.NET Core, Laravel and React.",
+  "I'm MD. Jakaria Mahmud, a Junior Software and Web Developer at Mariners Group in Dhaka, with a B.Sc. in Computer Science & Engineering from Ahsanullah University of Science and Technology (AUST). At work I build the Sales and Production modules of the company ERP with Next.js and TypeScript, and the Biniyog Club investment app with Flutter. Outside work I build web apps with ASP.NET Core, Laravel and React.",
   "Three of my Flutter apps are published on Google Play: a FinTech investment app, a community and blood donor app, and an Islamic lifestyle companion. Most of my projects are complete systems, with authentication and security, admin dashboards, databases, cloud services and a clean interface on top.",
   "Beyond app development, I'm a co-author of a peer-reviewed research paper on AI-based fruit quality assessment, published in Applied AI Letters (Wiley).",
   "I care about clean, maintainable code and about building reliable products that make a real difference for the people who use them.",
@@ -93,22 +94,43 @@ export const experience = [
   {
     role: "Junior Software and Web Developer",
     company: "Mariners Group",
+    companyUrl: "https://marinersgroup.com.bd/",
+    logo: "/companies/mariners-group-logo.png",
     department: "IT Department",
     location: "Dhaka, Bangladesh",
+    employmentType: "Full-time",
     period: "Oct 2026 – Present",
     startDate: "2026-10-04",
     current: true,
     summary:
-      "Building and maintaining software and web applications as part of the company's IT team.",
-    highlights: [],
-    stack: [],
+      "Full-stack development of the company's ERP system and its Biniyog Club investment app.",
+    highlights: [
+      "Building the Sales and Production modules of the company ERP with Next.js, React and TypeScript",
+      "Designing the PostgreSQL database on Neon with Prisma ORM, and securing the APIs with JWT authentication and Zod validation",
+      "Deploying and running the ERP on a VPS with Nginx and PM2, with Cloudinary for file and image storage",
+      "Developing Biniyog Club, the company's cross-platform investment app, with Flutter",
+    ],
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "PostgreSQL (Neon)",
+      "Prisma ORM",
+      "JWT Auth",
+      "Zod",
+      "Cloudinary",
+      "Nginx",
+      "PM2",
+      "VPS",
+      "Flutter",
+    ],
   },
 ];
 
 export const skills = [
   {
     category: "Languages",
-    items: ["Dart", "C#", "JavaScript", "PHP", "C++", "Java", "C"],
+    items: ["TypeScript", "JavaScript", "Dart", "C#", "PHP", "C++", "Java", "C"],
   },
   {
     category: "Mobile",
@@ -116,19 +138,19 @@ export const skills = [
   },
   {
     category: "Backend",
-    items: ["ASP.NET Core MVC", ".NET 9", "SignalR", "Laravel", "Node.js", "Entity Framework Core", "Supabase Edge Functions", "RESTful APIs", "OAuth"],
+    items: ["Next.js", "Node.js", "Prisma ORM", "ASP.NET Core MVC", ".NET 9", "SignalR", "Laravel", "Entity Framework Core", "RESTful APIs", "JWT & OAuth", "Zod"],
   },
   {
     category: "Frontend",
-    items: ["React", "Livewire", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "AJAX"],
+    items: ["React", "Next.js", "Livewire", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "AJAX"],
   },
   {
     category: "Databases & Cloud",
-    items: ["PostgreSQL", "SQL Server", "MySQL", "MongoDB", "Firebase", "Supabase", "Cloudinary"],
+    items: ["PostgreSQL", "Neon", "SQL Server", "MySQL", "MongoDB", "Firebase", "Supabase", "Cloudinary"],
   },
   {
-    category: "Tools & Practices",
-    items: ["Git", "GitHub", "TortoiseGit", "Gemini, OpenAI & Groq APIs", "MVC Architecture", "OOP", "Design Patterns"],
+    category: "DevOps & Tools",
+    items: ["VPS", "Nginx", "PM2", "Vercel", "Git", "GitHub", "Gemini, OpenAI & Groq APIs", "OOP", "Design Patterns"],
   },
 ];
 
@@ -145,6 +167,8 @@ export const projects = [
     title: "Biniyog Club",
     category: "mobile",
     type: "FinTech",
+    // where it was built (shown under the title); remove for personal projects
+    builtAt: "Mariners Group",
     published: true,
     description:
       "A cross-platform investment and portfolio management app for individual and group investing, share purchases and real-time profit tracking.",

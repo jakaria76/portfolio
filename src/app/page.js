@@ -73,7 +73,11 @@ function buildJsonLd() {
         knowsAbout: skills.flatMap((group) => group.items),
         worksFor: experience
           .filter((job) => job.current)
-          .map((job) => ({ "@type": "Organization", name: job.company })),
+          .map((job) => ({
+            "@type": "Organization",
+            name: job.company,
+            ...(job.companyUrl && { url: job.companyUrl }),
+          })),
         sameAs: [site.github, site.linkedin, site.orcid].filter(Boolean),
         ...(site.orcid && {
           identifier: {
