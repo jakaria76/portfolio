@@ -5,15 +5,15 @@ import { ArrowRightIcon, DownloadIcon, GitHubIcon, LinkedInIcon, MailIcon, MapPi
 export default function Hero({ hasPhoto, hasResume }) {
   return (
     <section className="relative overflow-hidden pt-24 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20">
-      {/* soft glow in the background */}
-      <div
-        className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[800px] max-w-[200vw] -translate-x-1/2 rounded-full bg-emerald-500/10 blur-3xl"
-        aria-hidden="true"
-      />
+      {/* soft floating glows in the background */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div className="animate-float absolute -top-32 left-[10%] h-[420px] w-[420px] rounded-full bg-emerald-500/15 blur-3xl" />
+        <div className="animate-float-slow absolute top-10 right-[5%] h-[360px] w-[360px] rounded-full bg-cyan-500/10 blur-3xl" />
+      </div>
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 md:grid-cols-[1fr_auto] md:gap-12">
         {/* photo: on top on mobile, on the right on desktop */}
-        <div className="animate-fade-up mx-auto md:order-last md:mx-0">
+        <div data-reveal="zoom" style={{ "--d": "250ms" }} className="mx-auto md:order-last md:mx-0">
           <div className="relative h-40 w-40 sm:h-64 sm:w-64 lg:h-72 lg:w-72">
             <div className="absolute inset-0 rotate-6 rounded-3xl border border-accent/30" aria-hidden="true" />
             <div className="absolute inset-0 -rotate-3 rounded-3xl bg-accent/5" aria-hidden="true" />
@@ -34,8 +34,8 @@ export default function Hero({ hasPhoto, hasResume }) {
           </div>
         </div>
 
-        <div className="animate-fade-up text-center [animation-delay:100ms] md:text-left">
-          <p className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-semibold text-accent sm:text-sm">
+        <div className="text-center md:text-left">
+          <p data-reveal="up" className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-semibold text-accent sm:text-sm">
             <span className="relative flex h-2 w-2" aria-hidden="true">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60 motion-reduce:hidden" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
@@ -43,24 +43,24 @@ export default function Hero({ hasPhoto, hasResume }) {
             Currently at Mariners Group
           </p>
 
-          <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-heading sm:text-6xl lg:text-7xl">
+          <h1 data-reveal="up" style={{ "--d": "80ms" }} className="mt-5 text-4xl font-extrabold tracking-tight text-heading sm:text-6xl lg:text-7xl">
             {site.name}
           </h1>
-          <p className="mt-3 text-xl font-semibold sm:mt-4 sm:text-3xl">
+          <p data-reveal="up" style={{ "--d": "160ms" }} className="mt-3 text-xl font-semibold sm:mt-4 sm:text-3xl">
             <span className="bg-gradient-to-r from-emerald-500 to-cyan-500 bg-clip-text text-transparent">
               {site.title}
             </span>
           </p>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg md:mx-0">
+          <p data-reveal="up" style={{ "--d": "240ms" }} className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg md:mx-0">
             {site.tagline}
           </p>
 
-          <p className="mt-4 flex items-center justify-center gap-2 text-sm text-faint md:justify-start">
+          <p data-reveal="up" style={{ "--d": "300ms" }} className="mt-4 flex items-center justify-center gap-2 text-sm text-faint md:justify-start">
             <MapPinIcon className="h-4 w-4" />
             {site.location}
           </p>
 
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4 md:justify-start">
+          <div data-reveal="up" style={{ "--d": "360ms" }} className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4 md:justify-start">
             <a
               href="#projects"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent-solid px-6 py-3 font-semibold text-on-accent shadow-lg shadow-emerald-500/20 transition-all hover:-translate-y-0.5 hover:bg-accent-hover"
@@ -81,7 +81,7 @@ export default function Hero({ hasPhoto, hasResume }) {
             )}
           </div>
 
-          <div className="mt-6 flex items-center justify-center gap-2 text-muted md:justify-start">
+          <div data-reveal="up" style={{ "--d": "420ms" }} className="mt-6 flex items-center justify-center gap-2 text-muted md:justify-start">
             <a href={site.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="rounded-lg p-2 transition-colors hover:bg-chip hover:text-heading">
               <GitHubIcon className="h-6 w-6" />
             </a>

@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { site, skills, education, experience, projects, publications } from "@/data/portfolio";
 import Preloader from "@/components/Preloader";
+import RevealObserver from "@/components/RevealObserver";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -127,6 +128,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildJsonLd()) }}
       />
       {site.preloaderSeconds > 0 && <Preloader hasPhoto={hasPhoto} />}
+      <RevealObserver />
       <Navbar hasResume={hasResume} />
       <main>
         <Hero hasPhoto={hasPhoto} hasResume={hasResume} />

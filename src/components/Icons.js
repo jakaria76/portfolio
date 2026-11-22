@@ -120,3 +120,53 @@ export const CloseIcon = (p) => (
     <path d="M18 6 6 18M6 6l12 12" />
   </Stroke>
 );
+
+export const CodeIcon = (p) => (
+  <Stroke {...p}>
+    <path d="m16 18 6-6-6-6" />
+    <path d="m8 6-6 6 6 6" />
+  </Stroke>
+);
+
+export const PhoneIcon = (p) => (
+  <Stroke {...p}>
+    <rect x="6" y="2" width="12" height="20" rx="2.5" />
+    <path d="M11 18h2" />
+  </Stroke>
+);
+
+export const ServerIcon = (p) => (
+  <Stroke {...p}>
+    <rect x="2" y="3" width="20" height="8" rx="2" />
+    <rect x="2" y="13" width="20" height="8" rx="2" />
+    <path d="M6 7h.01M6 17h.01" />
+  </Stroke>
+);
+
+export const LayoutIcon = (p) => (
+  <Stroke {...p}>
+    <rect x="3" y="3" width="18" height="18" rx="2" />
+    <path d="M3 9h18M9 21V9" />
+  </Stroke>
+);
+
+export const DatabaseIcon = (p) => (
+  <Stroke {...p}>
+    <ellipse cx="12" cy="5" rx="9" ry="3" />
+    <path d="M3 5v14a9 3 0 0 0 18 0V5" />
+    <path d="M3 12a9 3 0 0 0 18 0" />
+  </Stroke>
+);
+
+export const TerminalIcon = (p) => (
+  <Stroke {...p}>
+    <path d="m4 17 6-6-6-6" />
+    <path d="M12 19h8" />
+  </Stroke>
+);
+
+export const SparkIcon = (p) => (
+  <Stroke {...p}>
+    <path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8" />
+  </Stroke>
+);

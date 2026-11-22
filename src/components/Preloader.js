@@ -19,6 +19,7 @@ export default function Preloader({ hasPhoto }) {
     const root = document.documentElement;
     const finish = () => {
       root.classList.remove("preloading");
+      window.dispatchEvent(new Event("preloader:done"));
       try {
         sessionStorage.setItem("preloaded", "1");
       } catch {

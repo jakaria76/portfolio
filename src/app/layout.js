@@ -50,11 +50,17 @@ const themeScript = `try{if(localStorage.getItem("theme")==="dark")document.docu
 // skipped for search-engine bots (good for SEO) and for repeat visits in the same session.
 const preloaderScript = `(function(){var d=document.documentElement;try{var bot=/bot|crawl|spider|slurp|lighthouse|pagespeed|preview|facebookexternalhit|linkedin|whatsapp/i.test(navigator.userAgent);if(bot||sessionStorage.getItem("preloaded")){d.classList.add("preloader-skip");return}}catch(e){}d.classList.add("preloading")})();`;
 
+// Turns on scroll animations for real visitors. Bots and people who prefer
+// reduced motion see everything at once. Safety net: if the page script never
+// starts, the animations are switched off so no content stays hidden.
+const revealScript = `(function(){var d=document.documentElement;try{if(/bot|crawl|spider|slurp|lighthouse|pagespeed|preview|facebookexternalhit|linkedin|whatsapp/i.test(navigator.userAgent)||matchMedia("(prefers-reduced-motion: reduce)").matches)return}catch(e){return}d.classList.add("reveal-on");setTimeout(function(){if(!window.__revealReady)d.classList.remove("reveal-on")},6000)})();`;
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script dangerouslySetInnerHTML={{ __html: revealScript }} />
         {site.preloaderSeconds > 0 && (
           <script dangerouslySetInnerHTML={{ __html: preloaderScript }} />
         )}
