@@ -8,9 +8,9 @@ export const site = {
   name: "MD. Jakaria Mahmud",
   // Short name: used in the navbar logo where space is tight
   shortName: "MD. Jakaria",
-  // Your name in Bangla, shown under your English name so Bangla searches find you
-  banglaName: "মোঃ জাকারিয়া মাহমুদ",
-  // Other ways people may write your name (helps Google connect them to you)
+  // Other ways people may write your name, including Bangla.
+  // Not shown on the page; only Google reads these (structured data), so that
+  // English and Bangla searches both point to you.
   alternateNames: [
     "MD. Jakaria",
     "Md Jakaria Mahmud",
