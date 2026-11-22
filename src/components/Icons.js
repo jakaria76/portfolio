@@ -68,6 +68,28 @@ export const ArrowRightIcon = (p) => (
   </Stroke>
 );
 
+export const BriefcaseIcon = (p) => (
+  <Stroke {...p}>
+    <rect x="2" y="7" width="20" height="14" rx="2" />
+    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+    <path d="M2 13h20" />
+  </Stroke>
+);
+
+export const GraduationIcon = (p) => (
+  <Stroke {...p}>
+    <path d="M22 10 12 5 2 10l10 5 10-5Z" />
+    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+  </Stroke>
+);
+
+export const BookIcon = (p) => (
+  <Stroke {...p}>
+    <path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2Z" />
+    <path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7Z" />
+  </Stroke>
+);
+
 export const PlayIcon = (p) => (
   <Stroke {...p}>
     <path d="M6 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 6 3.5Z" />

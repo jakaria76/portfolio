@@ -74,18 +74,21 @@ export const site = {
   ],
 };
 
+// The first paragraph is shown larger as an intro. Wrap words in **double stars** to make them bold.
 export const about = [
-  "I'm MD. Jakaria Mahmud, a Junior Software and Web Developer at Mariners Group in Dhaka, with a B.Sc. in Computer Science & Engineering from Ahsanullah University of Science and Technology (AUST). At work I build the Sales and Production modules of the company ERP with Next.js and TypeScript, and the Biniyog Club investment app with Flutter. Outside work I build web apps with ASP.NET Core, Laravel and React.",
-  "Three of my Flutter apps are published on Google Play: a FinTech investment app, a community and blood donor app, and an Islamic lifestyle companion. Most of my projects are complete systems, with authentication and security, admin dashboards, databases, cloud services and a clean interface on top.",
-  "Beyond app development, I'm a co-author of a peer-reviewed research paper on AI-based fruit quality assessment, published in Applied AI Letters (Wiley).",
-  "I care about clean, maintainable code and about building reliable products that make a real difference for the people who use them.",
+  "I'm **MD. Jakaria Mahmud**, a software and web developer from Dhaka who turns ideas into products people actually use.",
+  "At **Mariners Group** I build the **Sales and Production modules** of the company ERP with **Next.js and TypeScript**, and the **Biniyog Club** investment app with **Flutter**.",
+  "I have **three apps live on Google Play**, from a FinTech investment app to a community blood donor app and an Islamic lifestyle companion. Outside work I also build with **ASP.NET Core, Laravel and React**.",
+  "I'm a co-author of a **peer-reviewed AI research paper** in Applied AI Letters (Wiley), and I care about clean, maintainable code and reliable products.",
 ];
 
+// "At a glance" card in the About section. icon: briefcase, education, play, research or location.
 export const quickFacts = [
-  { label: "Working at", value: "Mariners Group" },
-  { label: "Education", value: "B.Sc. in CSE, AUST" },
-  { label: "Published", value: "3 apps on Google Play" },
-  { label: "Research", value: "Applied AI Letters (Wiley)" },
+  { icon: "briefcase", label: "Working at", value: "Mariners Group", detail: "Junior Software & Web Developer" },
+  { icon: "education", label: "Education", value: "B.Sc. in CSE", detail: "Ahsanullah University of Science and Technology" },
+  { icon: "play", label: "Published", value: "3 apps on Google Play", detail: "Flutter · Android" },
+  { icon: "research", label: "Research", value: "Applied AI Letters", detail: "Wiley · 2026" },
+  { icon: "location", label: "Based in", value: "Dhaka, Bangladesh", detail: "GMT+6" },
 ];
 
 // Jobs, newest first. current: true shows "Present" and a "Current" badge.
