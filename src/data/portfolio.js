@@ -42,23 +42,33 @@ export const site = {
   // Search Console is verified with the file public/google6df2a6de2289172b.html
   // (never delete it). This field is only for the alternative meta-tag method.
   googleVerification: "",
+  // Note: Google ignores the keywords meta tag. Keep this list short and relevant;
+  // stuffing it can look like spam. What ranks is the visible text on the page.
   keywords: [
+    // name
     "MD. Jakaria Mahmud",
     "Md Jakaria Mahmud",
     "Jakaria Mahmud",
     "MD. Jakaria",
-    "Jakaria",
+    "Jakaria Mahmud portfolio",
     "মোঃ জাকারিয়া মাহমুদ",
     "জাকারিয়া মাহমুদ",
-    "Full Stack Developer",
-    "Flutter Developer",
-    "Flutter App Developer Bangladesh",
-    "Mobile App Developer Dhaka",
-    "Web Developer Bangladesh",
-    "ASP.NET Core Developer",
-    "Laravel Developer",
-    "React Developer",
+    // role + place
+    "Full Stack Developer Bangladesh",
+    "Flutter Developer Bangladesh",
+    "Flutter Developer Dhaka",
+    "Mobile App Developer Bangladesh",
+    "ASP.NET Core Developer Bangladesh",
+    "Laravel Developer Dhaka",
+    "React Developer Bangladesh",
+    "Software Engineer Bangladesh",
+    // education, work, research
     "AUST CSE",
+    "Ahsanullah University of Science and Technology",
+    "Conscious Student Society app",
+    "Rojar Alo app",
+    "ThesisNest",
+    "Applied AI Letters",
   ],
 };
 
