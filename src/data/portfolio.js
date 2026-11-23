@@ -166,13 +166,13 @@ export const skills = [
 // published: true shows a "Published on Google Play" badge
 // links:     each link shows as a button. Links with an empty url ("") are hidden.
 //            type is "playstore", "github" or "live".
-// TODO: paste Biniyog Club's Google Play link and each project's own GitHub repository link
 export const projects = [
   // ---------------- Mobile Apps ----------------
   {
     title: "Biniyog Club",
     category: "mobile",
     type: "FinTech",
+    logo: "/projects/biniyog-club-logo.png",
     // where it was built (shown under the title); remove for personal projects
     builtAt: "Mariners Group",
     published: true,
@@ -186,7 +186,7 @@ export const projects = [
     ],
     stack: ["Flutter", "Dart", "PostgreSQL", "Firebase", "Cloudinary", "REST API"],
     links: [
-      { type: "playstore", url: "" },
+      { type: "playstore", url: "https://play.google.com/store/apps/details?id=com.biniyogclub.app" },
       { type: "github", url: "https://github.com/jakaria76/Biniyog-Club" },
     ],
     image: "",
