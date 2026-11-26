@@ -43,8 +43,8 @@ export const site = {
   preloaderSeconds: 3,
   // your resume inside the /public folder
   resume: "/resume.pdf",
-  // Search Console is verified with the file public/google6df2a6de2289172b.html
-  // (never delete it). This field is only for the alternative meta-tag method.
+  // Search Console is verified with the files in public/ (never delete them).
+  // This field is only for the alternative meta-tag method.
   googleVerification: "",
   // Note: Google ignores the keywords meta tag. Keep this list short and relevant;
   // stuffing it can look like spam. What ranks is the visible text on the page.
