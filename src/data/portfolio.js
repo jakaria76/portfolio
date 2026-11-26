@@ -287,7 +287,7 @@ export const projects = [
     stack: ["ASP.NET Core MVC", "C#", "ASP.NET Core Identity"],
     links: [
       { type: "live", url: "" },
-      { type: "github", url: "https://github.com/jakaria76/CSS" },
+      { type: "github", url: "https://github.com/jakaria76/CSS-Web" },
     ],
     image: "",
   },
